@@ -1,0 +1,25 @@
+.spinning-loader {
+  --size: 6rem;
+  display: inline-block;
+  height: var(--size);
+  width: var(--size);
+}
+.spinning-loader::after {
+  animation: spinning-loader 1s ease-in-out infinite;
+  border: 0.6rem solid white;
+  border-color: var(--color-primary) transparent var(--color-secondary)
+    transparent;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: var(--size);
+  width: var(--size);
+}
+@keyframes spinning-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -54,6 +54,8 @@ body {
   --rounded-sm: 0.5rem;
 
   // Transitions
-  --transition-all-fast: all 0.1s ease-in-out;
-  --transition-all-slow: all 0.4s ease-in-out;
+  --slow: 0.4s;
+  --fast: 0.1s;
+  --transition-all-fast: all var(--fast) ease-in-out;
+  --transition-all-slow: all var(--slow) ease-in-out;
 }
