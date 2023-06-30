@@ -8,16 +8,14 @@
       object-fit: cover;
       width: 100%;
     }
-    & > div {
+    & > p {
       background-color: var(--color-tertiary);
       border-radius: var(--rounded-sm);
+      color: var(--color-tertiary-dark);
       padding: var(--padding-btn-2);
       position: absolute;
       right: var(--padding-sm);
       top: var(--padding-sm);
-      & > p {
-        color: var(--color-tertiary-dark);
-      }
     }
   }
   &__bottom {
@@ -61,7 +59,7 @@
     bottom: 0;
     height: 0%;
     position: absolute;
-    transition: all 0.3s ease-in-out;
+    transition: var(--transition-all-slow);
     width: 100%;
   }
 

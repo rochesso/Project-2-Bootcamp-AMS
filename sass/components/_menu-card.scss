@@ -1,0 +1,50 @@
+.menu-card {
+  @include card;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  &__info {
+    flex: 1 1 0;
+    // It needs the min-width so the text can overflow with the ellipsis
+    min-width: 0;
+    padding: var(--padding-sm);
+    // White space only works if the parent has min-width
+    & > p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  &__price {
+    padding: var(--padding-sm);
+  }
+  &__button {
+    align-items: center;
+    align-self: stretch;
+    background-color: var(--color-tertiary);
+    display: flex;
+    justify-content: center;
+    transition: var(--transition-all-slow);
+    width: 0rem;
+    & > i {
+      color: var(--color-white);
+      font-size: 3rem;
+    }
+  }
+  &:hover &__button {
+    width: 8rem;
+  }
+
+  &:hover &__button > i {
+    animation: rotate 0.4s;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
