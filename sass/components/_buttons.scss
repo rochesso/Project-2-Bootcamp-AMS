@@ -8,6 +8,7 @@
   color: var(--color-white);
   padding: var(--padding-btn);
   transition: var(--transition-all-fast);
+  width: fit-content;
 
   &:hover {
     background-image: linear-gradient(

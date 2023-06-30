@@ -1,7 +1,11 @@
 // Css native variables
 body {
   // Percentage used to make the colors primary and secondary lighter
-  --color-mix-white: 90%;
+  // Slight light
+  --color-mix-white-low: 90%;
+  // Very light
+  --color-mix-white-hight: 10%;
+
   // Colors
   --color-primary: #9356dc;
   --color-secondary: #ff79da;
@@ -11,19 +15,28 @@ body {
   // Lighter colors
   --color-primary-light: color-mix(
     in srgb,
-    var(--color-primary) var(--color-mix-white),
+    var(--color-primary) var(--color-mix-white-low),
+    white
+  );
+  --color-primary-light-2: color-mix(
+    in srgb,
+    var(--color-primary) var(--color-mix-white-hight),
     white
   );
   --color-secondary-light: color-mix(
     in srgb,
-    var(--color-secondary) var(--color-mix-white),
+    var(--color-secondary) var(--color-mix-white-low),
     white
   );
 
   // Paddings
   --padding-btn: 2rem 3rem;
+  --padding-card: 2rem 0rem;
 
   // Margins
+
+  // Gaps
+  --gap: 2rem;
 
   // Shadows
   --shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
@@ -32,6 +45,7 @@ body {
 
   // Border radius
   --rounded-big: 10rem;
+  --rounded: 2rem;
 
   // Transitions
   --transition-all-fast: all 0.1s ease-in-out;
