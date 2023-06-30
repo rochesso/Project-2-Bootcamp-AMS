@@ -1,13 +1,10 @@
 .step-card {
+  @include card;
   align-items: center;
-  border-radius: var(--rounded);
-  box-shadow: var(--shadow);
-  cursor: pointer;
   display: flex;
   gap: var(--gap);
   padding: var(--padding-card);
   padding-right: var(--gap);
-  position: relative;
   // number background size
   --width: 3rem;
   --height: 3rem;

@@ -29,9 +29,14 @@ body {
     white
   );
 
+  // Darker Colors
+  --color-tertiary-dark: color-mix(in srgb, var(--color-tertiary) 50%, black);
+
   // Paddings
   --padding-btn: 2rem 3rem;
+  --padding-btn-2: 0.5rem 3rem;
   --padding-card: 2rem 0rem;
+  --padding-sm: 1.5rem;
 
   // Margins
 
@@ -46,6 +51,7 @@ body {
   // Border radius
   --rounded-big: 10rem;
   --rounded: 2rem;
+  --rounded-sm: 0.5rem;
 
   // Transitions
   --transition-all-fast: all 0.1s ease-in-out;
