@@ -1,6 +1,38 @@
+// Css native variables
 body {
-    --color-primary: #9356DC ;
-    --color-secondary: #FF79DA;
-    --color-tertiary: #99E2D0;
+  // Percentage used to make the colors primary and secondary lighter
+  --color-mix-white: 90%;
+  // Colors
+  --color-primary: #9356dc;
+  --color-secondary: #ff79da;
+  --color-tertiary: #99e2d0;
+  --color-white: white;
+
+  // Lighter colors
+  --color-primary-light: color-mix(
+    in srgb,
+    var(--color-primary) var(--color-mix-white),
+    white
+  );
+  --color-secondary-light: color-mix(
+    in srgb,
+    var(--color-secondary) var(--color-mix-white),
+    white
+  );
+
+  // Paddings
+  --padding-btn: 2rem 3rem;
+
+  // Margins
+
+  // Shadows
+  --shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  --shadow-down: 4px 4px 6px rgba(0, 0, 0, 0.6);
+  --shadow-active: 4px 4px 4px rgba(0, 0, 0, 0.7);
+
+  // Border radius
+  --rounded-big: 10rem;
+
+  // Transitions
+  --transition-all-fast: all 0.1s ease-in-out;
 }
- 

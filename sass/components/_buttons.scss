@@ -1,2 +1,26 @@
 .btn {
+  background-image: linear-gradient(
+    var(--color-secondary),
+    var(--color-primary)
+  );
+  border-radius: var(--rounded-big);
+  box-shadow: var(--shadow);
+  color: var(--color-white);
+  padding: var(--padding-btn);
+  transition: var(--transition-all-fast);
+
+  &:hover {
+    background-image: linear-gradient(
+      var(--color-secondary-light),
+      var(--color-primary-light)
+    );
+
+    box-shadow: var(--shadow-down);
+    transform: translate(2px, 2px);
+  }
+
+  &:active {
+    box-shadow: var(--shadow-active);
+    transform: translate(3px, 3px);
+  }
 }
