@@ -5,3 +5,10 @@
   cursor: pointer;
   position: relative;
 }
+
+@mixin container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  padding: var(--padding-extra-lg) var(--padding-md);
+}

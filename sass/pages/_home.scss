@@ -16,16 +16,10 @@
 }
 
 .steps {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-md);
-  padding: var(--padding-extra-lg) var(--padding-md);
+  @include container;
 }
 
 .restaurants {
   background-color: var(--color-gray-light-2);
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-md);
-  padding: var(--padding-extra-lg) var(--padding-md);
+  @include container;
 }

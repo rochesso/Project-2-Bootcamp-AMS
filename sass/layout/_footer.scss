@@ -1,10 +1,7 @@
 .footer {
   background-color: var(--color-gray-dark);
   color: var(--color-white);
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-md);
-  padding: var(--padding-lg) var(--padding-md);
+  @include container;
   &__title {
   }
 
