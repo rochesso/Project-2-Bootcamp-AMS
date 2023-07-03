@@ -31,12 +31,12 @@ body {
   );
   --color-gray-light: color-mix(
     in srgb,
-    var(--color-gray) var(--color-mix-white-hight),
+    var(--color-gray) calc(var(--color-mix-white-hight) * 1.5),
     white
   );
   --color-gray-light-2: color-mix(
     in srgb,
-    var(--color-gray) calc(var(--color-mix-white-hight) / 2),
+    var(--color-gray) calc(var(--color-mix-white-hight) / 1.5),
     white
   );
 
@@ -51,11 +51,14 @@ body {
   --padding-sm: 1.5rem;
   --padding-md: 2.3rem;
   --padding-lg: 3rem;
+  --padding-extra-lg: 4rem;
 
   // Margins
 
   // Gaps
   --gap: 2rem;
+  --gap-md: 2.5rem;
+  --gap-lg: 3.5rem;
 
   // Shadows
   --shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);

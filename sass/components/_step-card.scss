@@ -1,8 +1,11 @@
 .step-card {
   @include card;
   align-items: center;
+  background-color: var(--color-gray-light-2);
   display: flex;
   gap: var(--gap);
+  // Margin left so the card start from the left of the number circle
+  margin-left: calc(var(--width) / 2);
   padding: var(--padding-card);
   padding-right: var(--gap);
   // number background size
@@ -24,7 +27,10 @@
 
   &__icon {
     color: gray;
+    // Icon size
     font-size: 2.5rem;
+    // justify text because icons have different sizes
+    min-width: 6.35rem;
     // Icon has the same distance between text and icon
     padding-left: calc(var(--gap) + var(--width) / 2);
   }
