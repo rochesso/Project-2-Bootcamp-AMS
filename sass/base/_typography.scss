@@ -13,6 +13,7 @@ body {
 h1 {
   font-family: "Shrikhand", sans-serif;
   font-size: 3.5rem;
+  font-weight: 100;
 }
 
 h3,
@@ -35,4 +36,17 @@ button {
 .step-card__text {
   font-size: 1.7rem;
   font-weight: 500;
+}
+
+.footer {
+  // Footer title
+  &__title {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  // Footer text
+  & li {
+    font-size: 1.7rem;
+  }
 }

@@ -42,6 +42,11 @@ body {
 
   // Darker Colors
   --color-tertiary-dark: color-mix(in srgb, var(--color-tertiary) 50%, black);
+  --color-gray-dark: color-mix(
+    in srgb,
+    var(--color-gray) calc(var(--color-mix-white-hight) * 4),
+    black
+  );
 
   // Paddings
   --padding-btn: 2rem 3rem;
@@ -56,6 +61,7 @@ body {
   // Margins
 
   // Gaps
+  --gap-sm: 0.8rem;
   --gap: 2rem;
   --gap-md: 2.5rem;
   --gap-lg: 3.5rem;
