@@ -6,12 +6,13 @@
 
 .menu {
   background-color: var(--color-gray-light);
-  border-radius: var(--rounded-md);
+  border-radius: var(--rounded-md) var(--rounded-md) 0 0;
   margin-top: calc(var(--rounded-md) * -1);
   min-height: 50rem;
   position: relative;
   @include container;
 
+  // Page title
   &__title {
     align-items: center;
     display: flex;
@@ -20,5 +21,31 @@
     & > .heart {
       margin-right: 2rem;
     }
+  }
+
+  // Section with options
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    padding: var(--padding-sm) 0;
+    // Section Title
+    & > h3::after {
+      border-bottom: 0.3rem solid var(--color-tertiary);
+      content: " ";
+      display: block;
+      margin-top: 0.3rem;
+      width: 6rem;
+    }
+  }
+
+  // Button
+  & > .btn {
+    --padding: 10rem;
+    margin: 0 auto;
+    margin-bottom: var(--padding-extra-lg);
+    margin-top: var(--padding-md);
+    padding-left: var(--padding);
+    padding-right: var(--padding);
   }
 }

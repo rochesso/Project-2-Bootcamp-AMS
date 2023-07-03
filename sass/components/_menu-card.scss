@@ -1,6 +1,7 @@
 .menu-card {
   @include card;
   align-items: center;
+  background-color: var(--color-white);
   display: flex;
   overflow: hidden;
   &__info {
@@ -24,6 +25,7 @@
     background-color: var(--color-tertiary);
     display: flex;
     justify-content: center;
+    overflow: hidden;
     transition: var(--transition-all-slow);
     width: 0rem;
     & > i {
