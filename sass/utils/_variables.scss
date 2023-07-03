@@ -11,6 +11,7 @@ body {
   --color-secondary: #ff79da;
   --color-tertiary: #99e2d0;
   --color-white: white;
+  --color-gray: gray;
 
   // Lighter colors
   --color-primary-light: color-mix(
@@ -28,6 +29,16 @@ body {
     var(--color-secondary) var(--color-mix-white-low),
     white
   );
+  --color-gray-light: color-mix(
+    in srgb,
+    var(--color-gray) var(--color-mix-white-hight),
+    white
+  );
+  --color-gray-light-2: color-mix(
+    in srgb,
+    var(--color-gray) calc(var(--color-mix-white-hight) / 2),
+    white
+  );
 
   // Darker Colors
   --color-tertiary-dark: color-mix(in srgb, var(--color-tertiary) 50%, black);
@@ -36,7 +47,10 @@ body {
   --padding-btn: 2rem 3rem;
   --padding-btn-2: 0.5rem 3rem;
   --padding-card: 2rem 0rem;
+  --padding-extra-sm: 0.5rem;
   --padding-sm: 1.5rem;
+  --padding-md: 2.3rem;
+  --padding-lg: 3rem;
 
   // Margins
 

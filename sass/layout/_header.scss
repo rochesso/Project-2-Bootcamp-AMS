@@ -1,3 +1,7 @@
 .header {
-    
+  box-shadow: var(--shadow);
+  padding-bottom: var(--padding-extra-sm);
+  padding-top: var(--padding-sm);
+  position: relative;
+  text-align: center;
 }
