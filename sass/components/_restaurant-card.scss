@@ -5,6 +5,7 @@
   &__top {
     position: relative;
     & > img {
+      height: 18rem;
       object-fit: cover;
       width: 100%;
     }
