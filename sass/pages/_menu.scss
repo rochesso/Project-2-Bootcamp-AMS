@@ -49,3 +49,41 @@
     padding-right: var(--padding);
   }
 }
+
+// Animation
+
+// First child is the title, because of this start from 2
+
+@for $i from 2 through 4 {
+  // Duration of the animation
+  $duration: 0.3s;
+  // Entrees, Main Dish and Desserts
+  $menus: 3;
+  // Title + maximum of 4 items inside de menu
+  $children: 5;
+  // Delay of each menu, ($duration * $children) 5 children will have 2.5s delay
+  // The first menu needs to have 0 delay, so ($i - 2) > 2-2=0
+  // The second needs to have 2.5s, so ($i - 2) > 3-2=1 and so on
+  $menu-delay: ($duration * $children) * ($i - 2);
+  .menu {
+    // Each menu animation
+    & > :nth-child(#{$i}) {
+      animation: fade-in $duration forwards;
+      animation-delay: $menu-delay;
+      opacity: 0%;
+
+      // Each item animation inside its specific menu
+      @for $x from 1 through 5 {
+        // Each item inside the menu needs to wait its own menu to appear
+        // They also needs to wait the previous item to appear
+        // The first one has only the delay of the menu
+        $children-delay: $menu-delay + $duration * ($x - 1);
+        & > :nth-child(#{$x}) {
+          animation: fade-in $duration forwards;
+          animation-delay: $children-delay;
+          opacity: 0%;
+        }
+      }
+    }
+  }
+}

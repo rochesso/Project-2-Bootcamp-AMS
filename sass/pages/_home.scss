@@ -23,3 +23,16 @@
   background-color: var(--color-gray-light-2);
   @include container;
 }
+
+.loading-animation {
+  animation: opacity-hide 2s forwards, width-hide 2s forwards;
+  background-color: var(--color-white);
+  display: grid;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  place-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
