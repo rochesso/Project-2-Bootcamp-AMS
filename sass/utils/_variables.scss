@@ -1,5 +1,9 @@
 // Css native variables
 body {
+  // Breakpoints
+  $breakpoint-tablet: 768px;
+  $breakpoint-desktop: 992px;
+
   // Percentage used to make the colors primary and secondary lighter
   // Slight light
   --color-mix-white-low: 90%;
