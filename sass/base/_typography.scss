@@ -11,13 +11,13 @@ body {
 }
 
 h1,
-.menu__title > h2 {
+.menu-title__text {
   font-family: "Shrikhand", sans-serif;
   font-size: 3rem;
   font-weight: 100;
 }
 
-.menu__section > h3 {
+.menu-section__title {
   font-weight: 100;
   text-transform: uppercase;
 }
@@ -34,7 +34,7 @@ button {
 }
 
 // "New" container inside restaurant
-.restaurant-card__top > p {
+.restaurant-card__new {
   font-weight: 500;
 }
 
@@ -52,7 +52,7 @@ button {
     font-weight: 100;
   }
   // Footer text
-  & li {
+  &__item {
     font-size: 1.7rem;
   }
 }

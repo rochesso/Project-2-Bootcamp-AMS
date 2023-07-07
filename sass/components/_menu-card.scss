@@ -9,12 +9,15 @@
     // It needs the min-width so the text can overflow with the ellipsis
     min-width: 0;
     padding: var(--padding-sm);
-    // White space only works if the parent has min-width
-    & > p {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
+  }
+  &__title {
+    // ...
+  }
+  // White space only works if the parent has min-width
+  &__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   &__price {
     padding: var(--padding-sm);
@@ -28,10 +31,10 @@
     overflow: hidden;
     transition: var(--transition-all-slow);
     width: 0rem;
-    & > i {
-      color: var(--color-white);
-      font-size: 3rem;
-    }
+  }
+  &__icon {
+    color: var(--color-white);
+    font-size: 3rem;
   }
   &:hover &__button {
     width: 8rem;

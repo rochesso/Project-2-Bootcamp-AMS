@@ -8,7 +8,10 @@
   position: relative;
   text-align: center;
 
-  & a {
+  &__title {
+    // ...
+  }
+  &__link {
     // Size of the icon
     font-size: 2.5rem;
     // Left position

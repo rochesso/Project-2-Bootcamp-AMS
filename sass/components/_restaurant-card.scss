@@ -4,20 +4,20 @@
 
   &__top {
     position: relative;
-    & > img {
-      height: 18rem;
-      object-fit: cover;
-      width: 100%;
-    }
-    & > p {
-      background-color: var(--color-tertiary);
-      border-radius: var(--rounded-sm);
-      color: var(--color-tertiary-dark);
-      padding: var(--padding-btn-2);
-      position: absolute;
-      right: var(--padding-sm);
-      top: var(--padding-sm);
-    }
+  }
+  &__img {
+    height: 18rem;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__new {
+    background-color: var(--color-tertiary);
+    border-radius: var(--rounded-sm);
+    color: var(--color-tertiary-dark);
+    padding: var(--padding-btn-2);
+    position: absolute;
+    right: var(--padding-sm);
+    top: var(--padding-sm);
   }
   &__bottom {
     align-items: center;

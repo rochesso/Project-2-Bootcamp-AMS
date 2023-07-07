@@ -1,4 +1,10 @@
-.container {
+.menu-container {
+  background-color: var(--color-gray-light);
+  border-radius: var(--rounded-md) var(--rounded-md) 0 0;
+  margin-top: calc(var(--rounded-md) * -1);
+  min-height: 50rem;
+  position: relative;
+  @include container;
 }
 
 // Temporary

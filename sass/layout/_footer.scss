@@ -4,15 +4,13 @@
   @include container;
   &__title {
   }
-
   &__list {
     display: flex;
     flex-direction: column;
     gap: var(--gap-sm);
-
-    & i {
-      // Justify the text because icons have different widths
-      min-width: 2.5rem;
-    }
+  }
+  &__icon {
+    // Justify the text because icons have different widths
+    min-width: 2.5rem;
   }
 }

@@ -4,50 +4,42 @@
   width: 100%;
 }
 
-.menu {
-  background-color: var(--color-gray-light);
-  border-radius: var(--rounded-md) var(--rounded-md) 0 0;
-  margin-top: calc(var(--rounded-md) * -1);
-  min-height: 50rem;
-  position: relative;
-  @include container;
+// Page title
+.menu-title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 
-  // Page title
-  &__title {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-
-    & > .heart {
-      margin-right: 2rem;
-    }
+  & > .heart {
+    margin-right: 2rem;
   }
+}
 
-  // Section with options
-  &__section {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-    padding: var(--padding-sm) 0;
-    // Section Title
-    & > h3::after {
-      border-bottom: 0.3rem solid var(--color-tertiary);
-      content: " ";
-      display: block;
-      margin-top: 0.3rem;
-      width: 6rem;
-    }
+// Section with options (menu-card)
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: var(--padding-sm) 0;
+  // Section Title
+  // Border below the title
+  &__title::after {
+    border-bottom: 0.3rem solid var(--color-tertiary);
+    content: " ";
+    display: block;
+    margin-top: 0.3rem;
+    width: 6rem;
   }
+}
 
-  // Button
-  & > .btn {
-    --padding: 10rem;
-    margin: 0 auto;
-    margin-bottom: var(--padding-extra-lg);
-    margin-top: var(--padding-md);
-    padding-left: var(--padding);
-    padding-right: var(--padding);
-  }
+// Button
+.menu-container > .btn {
+  --padding: 10rem;
+  margin: 0 auto;
+  margin-bottom: var(--padding-extra-lg);
+  margin-top: var(--padding-md);
+  padding-left: var(--padding);
+  padding-right: var(--padding);
 }
 
 // Animation
@@ -65,7 +57,7 @@
   // The first menu needs to have 0 delay, so ($i - 2) > 2-2=0
   // The second needs to have 2.5s, so ($i - 2) > 3-2=1 and so on
   $menu-delay: ($duration * $children) * ($i - 2);
-  .menu {
+  .menu-container {
     // Each menu animation
     & > :nth-child(#{$i}) {
       animation: fade-in $duration forwards;

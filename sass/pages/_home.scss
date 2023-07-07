@@ -6,11 +6,11 @@
   padding: var(--padding-extra-lg) 0;
   text-align: center;
 
-  & > h2 {
+  &__title {
     padding-bottom: var(--padding-extra-lg);
   }
 
-  & > p {
+  &__text {
     padding-bottom: var(--padding-lg);
   }
 }
