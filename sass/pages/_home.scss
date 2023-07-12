@@ -26,7 +26,7 @@
 
 .loading-animation {
   align-items: center;
-  animation: opacity-hide 2s forwards, width-hide 2s forwards;
+  animation: opacity-hide 0s forwards, width-hide 0s forwards;
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;

@@ -6,8 +6,6 @@
   gap: var(--gap);
   // Margin left so the card start from the left of the number circle
   margin-left: calc(var(--width) / 2);
-  padding: var(--padding-card);
-  padding-right: var(--gap);
   // number background size
   --width: 3rem;
   --height: 3rem;
@@ -23,6 +21,21 @@
     place-items: center;
     position: absolute;
     width: var(--width);
+    z-index: 10;
+  }
+
+  &__info {
+    border-radius: var(--rounded);
+    display: flex;
+    gap: var(--gap);
+    height: 100%;
+    overflow: hidden;
+
+    // background-color: red;
+    padding: var(--padding-card);
+    padding-right: var(--gap);
+    position: relative;
+    width: 100%;
   }
 
   &__icon {
@@ -33,13 +46,29 @@
     min-width: 6.35rem;
     // Icon has the same distance between text and icon
     padding-left: calc(var(--gap) + var(--width) / 2);
+    z-index: 10;
   }
 
   &__text {
+    z-index: 10;
   }
 
-  &:hover {
+  // Background on a different div for the animation
+  &__background {
     background-color: var(--color-primary-light-2);
+    height: 100%;
+    left: -3rem;
+    position: absolute;
+    top: 0;
+    transform: skewX(-45deg);
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    width: 0;
+    z-index: 9;
+  }
+
+  &:hover &__background {
+    width: 150%;
   }
 
   &:hover &__icon {

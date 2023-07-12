@@ -60,7 +60,7 @@
   .menu-container {
     // Each menu animation
     & > :nth-child(#{$i}) {
-      animation: fade-in $duration forwards;
+      animation: fade-in-bounce $duration forwards;
       animation-delay: $menu-delay;
       opacity: 0%;
 
@@ -71,8 +71,9 @@
         // The first one has only the delay of the menu
         $children-delay: $menu-delay + $duration * ($x - 1);
         & > :nth-child(#{$x}) {
-          animation: fade-in $duration forwards;
+          animation: fade-in-bounce $duration forwards;
           animation-delay: $children-delay;
+          animation-timing-function: ease-in-out;
           opacity: 0%;
         }
       }
