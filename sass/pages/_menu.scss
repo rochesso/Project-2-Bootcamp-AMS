@@ -1,3 +1,7 @@
+body:has(.menu-section) {
+  background-color: var(--color-gray);
+}
+
 .top-image {
   height: 25rem;
   object-fit: cover;

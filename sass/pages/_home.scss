@@ -1,3 +1,10 @@
+// limits the width of a element for larger screens
+.max-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200rem;
+}
+
 .explore {
   align-items: center;
   background-color: var(--color-gray-light-2);
@@ -49,7 +56,6 @@
 
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
-
     > .title {
       grid-column-end: 5;
     }
@@ -58,7 +64,7 @@
 
 .loading-animation {
   align-items: center;
-  animation: opacity-hide 0s forwards, width-hide 0s forwards;
+  animation: opacity-hide 2s forwards, width-hide 2s forwards;
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;
