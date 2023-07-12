@@ -3,6 +3,10 @@
   display: inline-block;
   height: var(--size);
   width: var(--size);
+
+  &__title {
+    animation: fade-in 1s alternate-reverse infinite;
+  }
 }
 .spinning-loader::after {
   animation: spinning-loader 1s ease-in-out infinite;

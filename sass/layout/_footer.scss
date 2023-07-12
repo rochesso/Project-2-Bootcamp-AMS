@@ -3,6 +3,7 @@
   color: var(--color-white);
   @include container;
   &__title {
+    // Font changes inside typography
   }
   &__list {
     display: flex;
