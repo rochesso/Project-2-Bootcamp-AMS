@@ -29,4 +29,27 @@
       margin-right: 2rem;
     }
   }
+
+  &::before {
+    background-image: linear-gradient(
+      to right,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    height: 0%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: var(--transition-all-fast);
+    width: 100%;
+  }
+
+  &:hover {
+    &::before {
+      height: 1rem;
+    }
+  }
 }
