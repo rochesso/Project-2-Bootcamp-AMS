@@ -2,6 +2,10 @@
   background-color: var(--color-gray-dark);
   color: var(--color-white);
   @include container;
+
+  @include tablet {
+    align-items: center;
+  }
   &__title {
     // Font changes inside typography
   }
@@ -9,9 +13,38 @@
     display: flex;
     flex-direction: column;
     gap: var(--gap-sm);
+    @include tablet {
+      flex-direction: row;
+      gap: calc(var(--gap-lg) * 2);
+    }
   }
   &__icon {
     // Justify the text because icons have different widths
     min-width: 2.5rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap-sm) / 2);
+    position: relative;
+    &::after {
+      --margin: 1rem;
+      background-image: linear-gradient(
+        var(--color-primary),
+        var(--color-secondary)
+      );
+      content: "";
+      height: 3px;
+      margin-left: calc(var(--margin) * -1);
+      transition: var(--transition-all-fast);
+      width: 0%;
+    }
+
+    &:hover {
+      &::after {
+        width: calc(100% + var(--margin) * 2);
+      }
+    }
   }
 }

@@ -25,13 +25,12 @@
   }
 
   &__info {
+    align-items: center;
     border-radius: var(--rounded);
     display: flex;
     gap: var(--gap);
     height: 100%;
     overflow: hidden;
-
-    // background-color: red;
     padding: var(--padding-card);
     padding-right: var(--gap);
     position: relative;
@@ -50,6 +49,7 @@
   }
 
   &__text {
+    // text-align: center;
     z-index: 10;
   }
 

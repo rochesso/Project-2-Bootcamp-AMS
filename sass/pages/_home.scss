@@ -17,11 +17,43 @@
 
 .steps {
   @include container;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    > .title {
+      grid-column-end: 4;
+      grid-column-start: 1;
+      text-align: center;
+    }
+  }
 }
 
 .restaurants {
   background-color: var(--color-gray-light-2);
   @include container;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
+    > .title {
+      grid-column-end: 3;
+      grid-column-start: 1;
+      text-align: center;
+    }
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+
+    > .title {
+      grid-column-end: 5;
+    }
+  }
 }
 
 .loading-animation {
