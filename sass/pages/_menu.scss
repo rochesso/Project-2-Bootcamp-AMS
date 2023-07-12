@@ -1,7 +1,3 @@
-body:has(.menu-section) {
-  background-color: var(--color-gray);
-}
-
 .top-image {
   height: 25rem;
   object-fit: cover;
@@ -16,6 +12,10 @@ body:has(.menu-section) {
 
   & > .heart {
     margin-right: 2rem;
+  }
+  @include desktop {
+    grid-column-end: 4;
+    grid-column-start: 1;
   }
 }
 
@@ -44,6 +44,10 @@ body:has(.menu-section) {
   margin-top: var(--padding-md);
   padding-left: var(--padding);
   padding-right: var(--padding);
+  @include desktop {
+    grid-column-end: 4;
+    grid-column-start: 1;
+  }
 }
 
 // Animation
