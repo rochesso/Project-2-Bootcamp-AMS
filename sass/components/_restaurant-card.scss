@@ -1,5 +1,6 @@
 .restaurant-card {
   @include card;
+  background-color: var(--color-white);
   overflow: hidden;
 
   &__top {
