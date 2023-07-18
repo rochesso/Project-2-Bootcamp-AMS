@@ -1,3 +1,6 @@
+// menu-container inside the _container.scss
+// Defines the layout of menu and width of cards with grid
+
 .top-image {
   height: 25rem;
   object-fit: cover;
@@ -68,7 +71,7 @@
   .menu-container {
     // Each menu animation
     & > :nth-child(#{$i}) {
-      animation: fade-in-bounce $duration forwards;
+      animation: fade-in $duration forwards;
       animation-delay: $menu-delay;
       opacity: 0%;
 
@@ -79,7 +82,10 @@
         // The first one has only the delay of the menu
         $children-delay: $menu-delay + $duration * ($x - 1);
         & > :nth-child(#{$x}) {
-          animation: fade-in-bounce $duration forwards;
+          animation: fade-in $duration forwards,
+            translate-up ($duration * 2) forwards;
+          // Alternative animation
+          // animation: fade-in-bounce $duration forwards;
           animation-delay: $children-delay;
           animation-timing-function: ease-in-out;
           opacity: 0%;

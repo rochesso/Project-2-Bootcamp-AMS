@@ -9,6 +9,10 @@
 html {
   // 1rem = 10px
   font-size: 62.5%;
+
+  @include desktop {
+    font-size: 70%;
+  }
 }
 
 body {
@@ -27,6 +31,11 @@ ul {
 button {
   border: none;
   cursor: pointer;
+}
+
+// Removes a white space below the image
+img {
+  vertical-align: middle;
 }
 
 // temporary

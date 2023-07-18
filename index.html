@@ -27,69 +27,77 @@
     </div>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header header--home-page">
         <span></span>
         <h1 class="header__title">
-            <img src="public/img/logo/ohmyfood@2x.svg" alt="ohmyfood" title="Ohmyfood">
+            <img class="header__logo" src="public/img/logo/ohmyfood@2x.svg" alt="ohmyfood" title="Ohmyfood">
         </h1>
-        <span></span>
+        <div class="header__location">
+            <i class="fa-sharp fa-solid fa-location-dot"></i>
+            <p>Paris, Belleville</p>
+        </div>
     </header>
 
     <main>
+
         <!-- Location -->
         <div class="location">
             <i class="fa-sharp fa-solid fa-location-dot"></i>
             <p>Paris, Belleville</p>
         </div>
 
-        <!-- Explore -->
-        <section class="explore">
-            <h2 class="explore__title">Book the menu you like</h2>
-            <p class="explore__text">Discover top-of-the-art restaurants we picked for you</p>
-            <!-- Main Button -->
-            <button class="btn">
-                Explore our restaurants
-            </button>
-        </section>
+        <!-- Layout on larger screens with explore and steps side by side with a background -->
+        <div class="top-wrapper">
 
-        <!-- Steps -->
-        <section class="steps max-width">
-            <h2 class="title">How it works</h2>
+            <!-- Explore -->
+            <section class="explore">
+                <h2 class="explore__title">Book the menu you like</h2>
+                <p class="explore__text">Discover top-of-the-art restaurants we picked for you</p>
+                <!-- Main Button -->
+                <a href="#restaurants" class="btn btn--bold">
+                    Explore our restaurants
+                </a>
+            </section>
 
-            <!-- Step card 1 -->
-            <div class="step-card">
-                <span class="step-card__number">1</span>
-                <div class="step-card__info">
-                    <div class="step-card__background"></div>
-                    <i class="step-card__icon fa-solid fa-mobile-screen-button"></i>
-                    <p class="step-card__text">Chose a restaurant</p>
-                </div>
-            </div>
+            <!-- Steps -->
+            <section class="steps">
+                <h2 class="title">How it works</h2>
 
-            <!-- Step card 2 -->
-            <div class="step-card">
-                <span class="step-card__number">2</span>
-                <div class="step-card__info">
-                    <div class="step-card__background"></div>
-                    <i class="step-card__icon fa-solid fa-list-ul"></i>
-                    <p class="step-card__text">Create your menu</p>
+                <!-- Step card 1 -->
+                <div class="step-card">
+                    <span class="step-card__number">1</span>
+                    <div class="step-card__info">
+                        <div class="step-card__background"></div>
+                        <i class="step-card__icon fa-solid fa-mobile-screen-button"></i>
+                        <p class="step-card__text">Chose a restaurant</p>
+                    </div>
                 </div>
 
-            </div>
+                <!-- Step card 2 -->
+                <div class="step-card">
+                    <span class="step-card__number">2</span>
+                    <div class="step-card__info">
+                        <div class="step-card__background"></div>
+                        <i class="step-card__icon fa-solid fa-list-ul"></i>
+                        <p class="step-card__text">Create your menu</p>
+                    </div>
 
-            <!-- Step card 3 -->
-            <div class="step-card">
-                <span class="step-card__number">3</span>
-                <div class="step-card__info">
-                    <div class="step-card__background"></div>
-                    <i class="step-card__icon fa-solid fa-store"></i>
-                    <p class="step-card__text">Go enjoy it at the restaurant</p>
                 </div>
 
-            </div>
-        </section>
+                <!-- Step card 3 -->
+                <div class="step-card">
+                    <span class="step-card__number">3</span>
+                    <div class="step-card__info">
+                        <div class="step-card__background"></div>
+                        <i class="step-card__icon fa-solid fa-store"></i>
+                        <p class="step-card__text">Go enjoy it at the restaurant</p>
+                    </div>
 
-        <section class="restaurants">
+                </div>
+            </section>
+        </div>
+
+        <section class="restaurants" id="restaurants">
             <h2 class="title">Restaurants</h2>
 
             <!-- Restaurant card 1 -->

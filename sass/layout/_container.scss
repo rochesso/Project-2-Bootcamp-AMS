@@ -1,3 +1,4 @@
+// Only used in the menu page
 .menu-container {
   background-color: var(--color-gray-light);
   border-radius: var(--rounded-md) var(--rounded-md) 0 0;
@@ -12,7 +13,8 @@
   }
   @include desktop {
     display: grid;
-    grid-template-columns: repeat(3, minmax(40rem, 33%));
+    // Width of the menu-cards on the menu page
+    grid-template-columns: repeat(3, minmax(35rem, 33%));
     max-width: none;
   }
 }

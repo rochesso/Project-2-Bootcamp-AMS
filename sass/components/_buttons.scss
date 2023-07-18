@@ -10,6 +10,10 @@
   transition: var(--transition-all-fast);
   width: fit-content;
 
+  &--bold {
+    font-weight: 400;
+  }
+
   &:hover {
     background-image: linear-gradient(
       var(--color-secondary-light),

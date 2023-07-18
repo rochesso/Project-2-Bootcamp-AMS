@@ -4,7 +4,7 @@ $breakpoint-desktop-small: 992px;
 $breakpoint-desktop: 1400px;
 
 // Css native variables
-body {
+:root {
   // Percentage used to make the colors primary and secondary lighter
   // Slight light
   --color-mix-white-low: 90%;

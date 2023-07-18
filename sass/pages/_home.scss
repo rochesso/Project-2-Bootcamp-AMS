@@ -1,8 +1,15 @@
-// limits the width of a element for larger screens
-.max-width {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 200rem;
+.top-wrapper {
+  @include desktop {
+    align-items: center;
+    background-image: url(../../public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20rem;
+    height: auto;
+    justify-content: center;
+    padding: calc(var(--padding-lg) * 3) var(--padding-md);
+  }
 }
 
 .explore {
@@ -10,6 +17,7 @@
   background-color: var(--color-gray-light-2);
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   padding: var(--padding-extra-lg) 0;
   text-align: center;
 
@@ -19,6 +27,11 @@
 
   &__text {
     padding-bottom: var(--padding-lg);
+  }
+
+  @include desktop {
+    @include container;
+    @include backdrop-card;
   }
 }
 
@@ -35,6 +48,11 @@
       grid-column-start: 1;
       text-align: center;
     }
+  }
+
+  @include desktop {
+    @include container;
+    @include backdrop-card;
   }
 }
 

@@ -2,21 +2,52 @@
   background-color: var(--color-white);
   box-shadow: var(--shadow);
   display: grid;
+  // Centers the logo
   grid-template-columns: 1fr min-content 1fr;
-  padding-bottom: var(--padding-extra-sm);
-  padding-top: var(--padding-sm);
+  padding-bottom: var(--padding-sm);
+  padding-top: var(--padding-md);
   place-items: center;
   position: relative;
   text-align: center;
 
-  &__title {
-    // ...
+  &--home-page {
+    // Logo on left and location on right (Home Page)
+    @include tablet {
+      grid-template-columns: 0 1fr 1fr;
+    }
   }
+
+  // Stays in the left corner on larger screens (Home Page)
+  &__title {
+    display: grid;
+    justify-content: start;
+    padding: 0 var(--padding-md);
+    width: 100%;
+  }
+
+  // Image logo
+  &__logo {
+    height: 100%;
+  }
+
+  // Menu page arrow to go back to home page
   &__link {
     // Size of the icon
     font-size: 2.5rem;
     // Left position
     justify-self: start;
     margin-left: var(--gap);
+  }
+
+  // Only larger screens, right corner
+  &__location {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      gap: var(--gap);
+      justify-self: end;
+      padding: 0 var(--padding-md);
+    }
   }
 }

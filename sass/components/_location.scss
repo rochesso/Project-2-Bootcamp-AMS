@@ -4,4 +4,8 @@
   gap: var(--gap);
   justify-content: center;
   padding: var(--padding-md);
+
+  @include tablet {
+    display: none;
+  }
 }

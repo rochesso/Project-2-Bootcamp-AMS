@@ -1,6 +1,8 @@
 .restaurant-card {
   @include card;
   background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 
   &__top {
@@ -23,6 +25,8 @@
   &__bottom {
     align-items: center;
     display: flex;
+    gap: var(--gap-md);
+    height: 100%;
     justify-content: space-between;
     padding: var(--padding-sm);
     position: relative;

@@ -22,14 +22,39 @@
       var(--color-primary),
       var(--color-secondary)
     );
-    bottom: 0;
-    height: 0%;
+    border-radius: 38%;
+    bottom: -30px;
+    height: 100%;
+    left: -4px;
+    // height: 0%;
     position: absolute;
-    transition: var(--transition-all-slow);
+    // transition: var(--transition-all-slow);
     width: 100%;
   }
 
   &:hover &__fill {
-    height: 100%;
+    // height: 100%;
+    animation: wave 2s forwards, wave-up 2s forwards;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0);
+  }
+  70% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes wave-up {
+  0% {
+    bottom: -30px;
+  }
+  100% {
+    bottom: 0px;
   }
 }
