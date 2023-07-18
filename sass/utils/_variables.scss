@@ -19,39 +19,15 @@ $breakpoint-desktop: 1400px;
   --color-gray: gray;
 
   // Lighter colors
-  --color-primary-light: color-mix(
-    in srgb,
-    var(--color-primary) var(--color-mix-white-low),
-    white
-  );
-  --color-primary-light-2: color-mix(
-    in srgb,
-    var(--color-primary) var(--color-mix-white-hight),
-    white
-  );
-  --color-secondary-light: color-mix(
-    in srgb,
-    var(--color-secondary) var(--color-mix-white-low),
-    white
-  );
-  --color-gray-light: color-mix(
-    in srgb,
-    var(--color-gray) calc(var(--color-mix-white-hight) * 1.5),
-    white
-  );
-  --color-gray-light-2: color-mix(
-    in srgb,
-    var(--color-gray) calc(var(--color-mix-white-hight) / 1.5),
-    white
-  );
+  --color-primary-light: #a070db;
+  --color-primary-light-2: #f1e6ff;
+  --color-secondary-light: #ff91e0;
+  --color-gray-light: #e3e3e3;
+  --color-gray-light-2: #f2f2f2;
 
   // Darker Colors
-  --color-tertiary-dark: color-mix(in srgb, var(--color-tertiary) 50%, black);
-  --color-gray-dark: color-mix(
-    in srgb,
-    var(--color-gray) calc(var(--color-mix-white-hight) * 4),
-    black
-  );
+  --color-tertiary-dark: #0f614c;
+  --color-gray-dark: #333333;
 
   // Paddings
   --padding-btn: 2rem 3rem;
