@@ -6,11 +6,11 @@
   cursor: pointer;
   display: grid;
   height: var(--size);
+  overflow: hidden;
   place-items: center;
   position: relative;
-  transform: scale(1.2);
   width: var(--size);
-  --size: 3rem;
+  --size: 3.5rem;
 
   // It's only used to clip-path on the .heart class
   &__svg {
@@ -21,17 +21,18 @@
   // Just to make sure everything is centered
   &__container {
     display: grid;
+    height: var(--size);
     place-items: center;
+    width: var(--size);
   }
 
   // Stroke of the heart
   &__stroke {
     fill: transparent;
-    height: 100%;
+    height: var(--size);
     stroke: black;
-    stroke-width: 4px;
-    transform: scale(0.9);
-    width: 100%;
+    stroke-width: 7px;
+    width: var(--size);
   }
 
   // Animated div to fill up the heart

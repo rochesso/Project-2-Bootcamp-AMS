@@ -10,7 +10,8 @@
 // Page title
 .menu-title {
   align-items: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr min-content;
   justify-content: space-between;
 
   & > .heart {

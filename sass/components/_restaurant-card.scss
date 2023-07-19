@@ -24,8 +24,9 @@
   }
   &__bottom {
     align-items: center;
-    display: flex;
+    display: grid;
     gap: var(--gap-md);
+    grid-template-columns: 1fr min-content;
     height: 100%;
     justify-content: space-between;
     padding: var(--padding-sm);
