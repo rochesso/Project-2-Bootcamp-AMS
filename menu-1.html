@@ -36,9 +36,29 @@
         <div class="menu-container">
             <div class="menu-title">
                 <h2 class="menu-title__text">The full Palette</h2>
+                <!-- Heart -->
                 <div class="heart">
-                    <div class="heart__stroke"></div>
-                    <div class="heart__fill"></div>
+                    <!-- Used for clip-path on css only -> clip-path: url() -->
+                    <!-- You can use clip-path: path() on css but it's not widely supported yet -->
+                    <!-- It is not visible on the page -->
+                    <!-- The svg below only needs to be on the html file once -->
+                    <svg class="heart__svg" height="0" width="0">
+                        <defs>
+                            <clipPath id=heart__clip clipPathUnits="objectBoundingBox" transform="scale(0.01 0.01)">
+                                <path d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    <!-- Heart stroke and fill -->
+                    <div class="heart__container">
+                        <!-- Heart stroke visible on the page -->
+                        <svg viewBox="0 0 100 100" class="heart__stroke">
+                            <path d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
+                        </svg>
+                        <!-- Animated div that fills the heart -->
+                        <div class="heart__fill"></div>
+                    </div>
                 </div>
             </div>
 
