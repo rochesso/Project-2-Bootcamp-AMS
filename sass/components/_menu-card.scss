@@ -11,7 +11,9 @@
     padding: var(--padding-sm);
   }
   &__title {
-    // ...
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   // White space only works if the parent has min-width
   &__description {
