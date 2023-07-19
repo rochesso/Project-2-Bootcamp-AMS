@@ -19,7 +19,14 @@
   flex-direction: column;
   flex-wrap: wrap;
   padding: var(--padding-extra-lg) 0;
+  position: relative;
   text-align: center;
+
+  @include desktop {
+    @include container;
+    @include backdrop-card;
+    @include gradient-shadow;
+  }
 
   &__title {
     padding-bottom: var(--padding-extra-lg);
@@ -27,11 +34,6 @@
 
   &__text {
     padding-bottom: var(--padding-lg);
-  }
-
-  @include desktop {
-    @include container;
-    @include backdrop-card;
   }
 }
 
@@ -53,6 +55,7 @@
   @include desktop {
     @include container;
     @include backdrop-card;
+    @include gradient-shadow;
   }
 }
 

@@ -19,6 +19,37 @@
   padding: var(--padding-extra-lg) var(--padding-md);
 }
 
+// You need to add a div with a class named shadow inside the element you want the shadow
+@mixin gradient-shadow {
+  & .shadow {
+    --border-radius: var(--rounded);
+    border: 150px solid #0000;
+    border-radius: calc(150px + var(--border-radius));
+    inset: -150px;
+    -webkit-mask: linear-gradient(to bottom, #000 0 0, #000 0 0) content-box,
+      linear-gradient(to bottom, #000 0 0, #000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    position: absolute;
+    z-index: -1;
+  }
+  & .shadow:before {
+    background: conic-gradient(
+      from 90deg at 60% -15%,
+      var(--color-primary),
+      var(--color-secondary),
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    border-radius: var(--border-radius);
+    content: "";
+    filter: blur(5px);
+    inset: -4px;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
 @mixin tablet {
   @media (min-width: $breakpoint-tablet) {
     @content;
