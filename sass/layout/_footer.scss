@@ -28,6 +28,8 @@
     flex-direction: column;
     gap: calc(var(--gap-sm) / 2);
     position: relative;
+    width: fit-content;
+
     &::after {
       --margin: 1rem;
       background-image: linear-gradient(
