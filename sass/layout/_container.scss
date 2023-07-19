@@ -15,7 +15,7 @@
     display: grid;
     // Width of the menu-cards on the menu page
     grid-template-columns: repeat(3, minmax(35rem, 33%));
-    max-width: none;
+    max-width: 192rem;
   }
 }
 

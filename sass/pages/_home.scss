@@ -60,29 +60,33 @@
   background-color: var(--color-gray-light-2);
   @include container;
 
+  & > .title {
+    @include tablet {
+      text-align: center;
+    }
+  }
+}
+
+.restaurants-wrapper {
+  @include container;
+  padding: 0;
+
   @include tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-
-    > .title {
-      grid-column-end: 3;
-      grid-column-start: 1;
-      text-align: center;
-    }
   }
 
   @include desktop {
-    grid-template-columns: repeat(4, 1fr);
-    > .title {
-      grid-column-end: 5;
-    }
+    align-self: center;
+    grid-template-columns: repeat(4, minmax(25rem, 45rem));
+    max-width: 192rem;
   }
 }
 
 .loading-animation {
   align-items: center;
-  animation: opacity-hide 2s forwards, width-hide 2s forwards;
+  animation: opacity-hide 0s forwards, width-hide 2s forwards;
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;
