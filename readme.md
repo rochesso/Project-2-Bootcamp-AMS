@@ -2,6 +2,8 @@
 
 CSS is the palette we use to paint the web, making pages beautiful, identifiable, and responsive. In this project we’ll learn to write clean, maintainable, and modular CSS code through the implementation of designed naming and file structures, such as BEM, and the use of SASS, a CSS precompiler.
 
+GitHub Pages: https://rochesso.github.io/Project-2-Bootcamp-AMS/
+
 ## Scenario
 
 You have just been recruited at Ohmyfood as a junior developer. Congratulations!
